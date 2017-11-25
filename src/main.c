@@ -18,10 +18,10 @@ int main(void)
     {
         //Step 3: Set PB0 high
         GPIOB->BSRR = GPIO_BSRR_BS0;
-        for (uint16_t i = 0; i != 0xffff; i++) { }
+        for (uint32_t i = 0; i != 10000; i++) { }
         //Step 4: Reset PB0 low
         GPIOB->BSRR = GPIO_BSRR_BR0;
-        for (uint16_t i = 0; i != 0xffff; i++) { }
+        for (uint32_t i = 0; i != 10000; i++) { }
     }
 
     return 0;
